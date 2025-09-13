@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class SpiralViewer
+{
+    public static void main(String[] args)
+    {
+        //Creating a scanner object and a frame object
+        Scanner in = new Scanner(System.in);
+ 
+
+        //variables initialized outside to be able to use them
+        int lengthInitialSegment = 0;
+        int numberOfSegments = 0;
+
+        //Prompt the user for initial segment length and number of segments
+        System.out.print("Enter length of initial segment:");
+        lengthInitialSegment = in.nextInt();
+        while (lengthInitialSegment <= 0)
+        {
+            System.out.println("ERROR: value must be > 0");
+            System.out.print("Enter length of initial segment:");
+            lengthInitialSegment = in.nextInt();
+        }
+       
+        //Prompt the user to enter number of segments
+        System.out.print("Enter the number of segments:");
+        numberOfSegments = in.nextInt();
+        while (numberOfSegments <= 0)
+        {
+            System.out.println("ERROR: value must be > 0");
+            System.out.print("Enter the number of segments:");
+            numberOfSegments = in.nextInt();
+        }
+    
+    }
+}
